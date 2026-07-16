@@ -40,7 +40,7 @@
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="title">Frosted Moments &nbsp;·&nbsp; Pâtisserie &amp; Horlogerie</div>
+<div id="title">Frosted Moments</div>
 <div id="ui">
   <div id="timeDisplay">--:--:--</div>
   <div id="hint">Drag to rotate &nbsp;·&nbsp; Pinch to zoom</div>
@@ -184,8 +184,9 @@ async function buildScene() {
   }
 
 const canvas = document.getElementById('c');
-const W = window.innerWidth;
-const H = window.innerHeight;
+const vvp = window.visualViewport;
+const W = vvp ? vvp.width : window.innerWidth;
+const H = vvp ? vvp.height : window.innerHeight;
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -210,14 +211,18 @@ controls.maxPolarAngle = Math.PI * 0.82;
 controls.update();
 
 function onResize() {
-  const w = window.innerWidth;
-  const h = window.innerHeight;
+  const vvp = window.visualViewport;
+  const w = vvp ? vvp.width : window.innerWidth;
+  const h = vvp ? vvp.height : window.innerHeight;
   renderer.setSize(w, h);
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
 }
 window.addEventListener('resize', onResize);
 window.addEventListener('orientationchange', () => setTimeout(onResize, 300));
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', onResize);
+}
 
 // ── Lights ──
 scene.add(new THREE.AmbientLight(0xfff5e8, 0.18));
