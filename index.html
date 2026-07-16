@@ -176,11 +176,11 @@ THREE.OrbitControls=function(object,domElement){
 // Build scene
 async function buildScene() {
   try {
-    const font = new FontFace('DM Serif Display', "url('./DMSerifDisplay-Regular.ttf')");
+    const font = new FontFace('Abril Fatface', "url('./AbrilFatface-Regular.ttf')");
     await font.load();
     document.fonts.add(font);
   } catch(e) {
-    console.warn('Local font load failed. Please ensure DMSerifDisplay-Regular.ttf is in the same directory as the HTML file.', e);
+    console.warn('Local font load failed. Please ensure AbrilFatface-Regular.ttf is in the same directory as the HTML file.', e);
   }
 
 const canvas = document.getElementById('c');
@@ -394,7 +394,7 @@ for(let h=0;h<12;h++){
   fctx.save();
   fctx.translate(tx, ty);
   fctx.rotate(a + Math.PI/2);
-  fctx.font = `240px 'DM Serif Display', Georgia, serif`;
+  fctx.font = `240px 'Abril Fatface', Georgia, serif`;
   fctx.save();
   fctx.scale(0.5, 1);
   fctx.fillText(romans[h], 0, 0);
