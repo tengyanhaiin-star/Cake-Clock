@@ -342,7 +342,8 @@ const R_FACE       = fc2 * 0.995; // face fill circle
 const R_INNER_RING = fc2 * 0.54;  // inner decorative ring
 const R_OUTER      = fc2 * 0.969; // outer tick ring  (was fc2-8 at 512px)
 const R_INNER      = fc2 * 0.898; // inner tick ring  (was fc2-26 at 512px)
-const R_NUMERALS   = fc2 * 0.4;  // numeral radius   (same fraction as before)
+const isIPhone = /iPhone/.test(navigator.userAgent);
+const R_NUMERALS   = fc2 * (isIPhone ? 0.40 : 0.44);  // iPhone vs desktop
 
 // Background: ivory
 fctx.fillStyle = '#ede0c8';
