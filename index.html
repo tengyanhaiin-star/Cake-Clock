@@ -176,11 +176,11 @@ THREE.OrbitControls=function(object,domElement){
 // Build scene
 async function buildScene() {
   try {
-    const font = new FontFace('Stint Ultra Condensed', "url('./StintUltraCondensed-Regular.ttf')");
+    const font = new FontFace('DM Serif Display', "url('./DMSerifDisplay-Regular.ttf')");
     await font.load();
     document.fonts.add(font);
   } catch(e) {
-    console.warn('Local font load failed. Please ensure StintUltraCondensed-Regular.ttf is in the same directory as the HTML file.', e);
+    console.warn('Local font load failed. Please ensure DMSerifDisplay-Regular.ttf is in the same directory as the HTML file.', e);
   }
 
 const canvas = document.getElementById('c');
@@ -385,8 +385,11 @@ for(let h=0;h<12;h++){
   fctx.translate(tx, ty);
   // rotate so text bottom points toward center: angle + PI/2 makes bottom face inward
   fctx.rotate(a + Math.PI/2);
-  fctx.font = `${fs}px 'Stint Ultra Condensed', Georgia, serif`;
+  fctx.font = `${fs}px 'DM Serif Display', Georgia, serif`;
+  fctx.save();
+  fctx.scale(0.5, 1);
   fctx.fillText(romans[h], 0, 0);
+  fctx.restore();
   fctx.restore();
 }
 
