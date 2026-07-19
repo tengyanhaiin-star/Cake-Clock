@@ -41,7 +41,7 @@ Simply open [3D Cake Clock](https://tengyanhaiin-star.github.io/Cake-Clock/) in 
 
 | Element | Font | Source |
 |---------|------|--------|
-| Roman numerals | Abril Fatface (48% width) | Local file |
+| Roman numerals | Abril Fatface (50% width) | Local file |
 | Page title | Noticia Text Italic | Google Fonts |
 | Hint text | Noticia Text | Google Fonts |
 | Time display | Courier Prime | Google Fonts |
