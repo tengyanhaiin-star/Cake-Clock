@@ -343,7 +343,7 @@ const R_INNER_RING = fc2 * 0.54;  // inner decorative ring
 const R_OUTER      = fc2 * 0.969; // outer tick ring  (was fc2-8 at 512px)
 const R_INNER      = fc2 * 0.898; // inner tick ring  (was fc2-26 at 512px)
 const isIPhone = /iPhone/.test(navigator.userAgent);
-const R_NUMERALS   = fc2 * (isIPhone ? 0.405 : 0.44);  // iPhone vs desktop
+const R_NUMERALS   = fc2 * (isIPhone ? 0.415 : 0.45);  // iPhone vs desktop
 
 // Background: ivory
 fctx.fillStyle = '#ede0c8';
@@ -394,7 +394,7 @@ for(let h=0;h<12;h++){
   fctx.save();
   fctx.translate(tx, ty);
   fctx.rotate(a + Math.PI/2);
-  fctx.font = `228px 'Abril Fatface', Georgia, serif`;
+  fctx.font = `232px 'Abril Fatface', Georgia, serif`;
   fctx.save();
   fctx.scale(0.5, 1);
   fctx.fillText(romans[h], 0, 0);
