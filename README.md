@@ -19,12 +19,6 @@ A real-time analog clock rendered as a three-tiered decorative cake, built with 
 
 Simply open [3D Cake Clock](https://tengyanhaiin-star.github.io/Cake-Clock/) in any modern browser. No build tools or dependencies required — Three.js is loaded from a CDN.
 
-### Add to iPhone home screen
-
-1. Open the page in Safari on iPhone
-2. Tap the Share button → **Add to Home Screen**
-3. The clock launches full-screen with no browser chrome
-
 ---
 
 ## Controls
