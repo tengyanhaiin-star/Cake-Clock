@@ -17,7 +17,7 @@ A real-time analog clock rendered as a three-tiered decorative cake, built with 
 
 ## Usage
 
-Simply open [3D Cake Clock](https://tengyanhaiin-star.github.io/Cake-Clock/) in any modern browser. No build tools or dependencies required — Three.js is loaded from a CDN.
+Simply open the [3D Cake Clock](https://tengyanhaiin-star.github.io/Cake-Clock/) in any modern browser. No build tools or dependencies required — Three.js is loaded from a CDN.
 
 ---
 
